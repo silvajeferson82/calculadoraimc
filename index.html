@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculadora IMC</title>
+   <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+<body>
+   <div class="container mt-o">
+      <h1 class="display-5 text-center">
+         <i>
+            <img src="img/medida.svg" alt="Imagem cintura" style="width: 60px;margin: 10px;">
+         </i>
+         <span class="text-center" style="color: #ed61b5;">Calculadora</span>
+         IMC
+      </h1>
+      <form action="" class="imc-form">
+         <div class="form-group">
+            <label for="altura">Altura (ex. 1,70)</label>
+            <input type="text" class="form-control inputHeight">
+         </div>
+         <div class="form-group">
+            <label for="peso">Peso (ex. 69,60)</label>
+            <input type="text" class="form-control inputWeight">
+         </div>
+         <input 
+         type="button" 
+         class="btnCalc btn-primary btn-block"
+         value="Calcular"
+         onclick="calcImc()">
+         <input 
+         type="button" 
+         class="btnClear btn-danger btn-block" 
+         value="Limpar" 
+         onclick="clearAll()">
+      </form>
+      <div>
+         <table class="table table-striped mt-3">
+            <tr class="colums text-center">
+               <th>IMC</th>
+               <th>Classificação</th>
+               <th>Obesidade(Grau)</th>
+            </tr>
+            <tr class="row1 text-center">
+               <td>Menor que 18,5</td>
+               <td>Magreza</td>
+               <td>0</td>
+            </tr>
+            <tr class="row2 text-center">
+               <td>Entre 18,5 e 24,9</td>
+               <td>Normal</td>
+               <td>0</td>
+            </tr>
+            <tr class="row3 text-center">
+               <td>Entre 25,0 e 29,9</td>
+               <td>Sobrepeso</td>
+               <td>I</td>
+            </tr>
+            <tr class="row4 text-center">
+               <td>Entre 30,0 e 39,9</td>
+               <td>Obesidade</td>
+               <td>II</td>
+            </tr>
+            <tr class="row5 text-center">
+               <td>Maior que 40,0</td>
+               <td>Obesidade grave</td>
+               <td>III</td>
+            </tr>
+
+         </table>
+      </div>
+   </div>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
